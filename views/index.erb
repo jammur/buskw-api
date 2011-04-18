@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <title>GRT API</title>
+    <link rel="stylesheet" href="/stylesheets/screen.css">
+  </head>
+  <body>
+    <p class="notice"><strong>Disclaimer:</strong> Route and schedule data for the Region of Waterloo used in this product or service is provided by permission of the Region. The Region assumes no responsibility for the accuracy or currency of the Data used in this product or service.</p>
+    
+    <h2>API Reference</h2>
+    
+    <h3>Stop List Resource</h3>
+    <h4>Resource URI</h4>
+    <p>GET /stops</p>
+    <h4>Sample Response</h4>
+    <pre><code>{
+  "stops":[
+    {
+      "_id":"2031",
+      "name":"Meadowvale / Dansbury",
+      "latitude":"43.498785",
+      "longitude":"-80.498918"
+    },
+    {
+      "_id":"1869",
+      "name":"Kinzie / Walker",
+      "latitude":"43.433097",
+      "longitude":"-80.436623"
+    },
+    {
+      "_id":"1868",
+      "name":"Kinzie / Obermeyer",
+      "latitude":"43.434163",
+      "longitude":"-80.43499"
+    }
+  ]
+}</code></pre>
+    
+    <br>
+    <hr>
+
+    <h3>Stop Instance Resource</h3>
+    <h4>Resource URI</h4>
+    <p>GET /stops/{stop_id}</p>
+    <h4>Sample Response</h4>
+    <pre><code>{
+  "_id":"2031",
+  "name":"Meadowvale / Dansbury",
+  "latitude":"43.498785",
+  "longitude":"-80.498918"
+}</code></pre>
+  
+    <br>
+    <hr>
+
+    <h3>Stop Times List Resource</h3>
+    <h4>Resource URI</h4>
+    <p>GET /stops/{stop_id}/times</p>
+    <h4>Sample Response</h4>
+    <pre><code>{
+  "stop_times":[
+    {
+      "_id":"4dabe706516350ded9001415",
+      "arrival_time":"10:56:00",
+      "departure_time":"10:56:00",
+      "route_id":"9",
+      "stop_id":"1185",
+      "stop_sequence":"21",
+      "trip_id":"416378_merged_1001166"
+    },
+    {
+      "_id":"4dabe702516350ded9000ef3",
+      "arrival_time":"11:54:00",
+      "departure_time":"11:54:00",
+      "route_id":"13",
+      "stop_id":"1185",
+      "stop_sequence":"21",
+      "trip_id":"419203_merged_1005868"
+    },
+    {
+      "_id":"4dabe700516350ded9000b4f",
+      "arrival_time":"13:54:00",
+      "departure_time":"13:54:00",
+      "route_id":"7",
+      "stop_id":"1185",
+      "stop_sequence":"21",
+      "trip_id":"419208_merged_1005631"
+    }
+  ]
+}</code></pre>
+
+    <br>
+    <hr>
+
+    <h3>Stop Times For Route List Resource</h3>
+    <h4>Resource URI</h4>
+    <p>GET /stops/{stop_id}/times/{route_id}</p>
+    <h4>Sample Response</h4>
+    <pre><code>{
+  "stop_times":[
+    {
+      "_id":"4dabe706516350ded9001415",
+      "arrival_time":"10:56:00",
+      "departure_time":"10:56:00",
+      "route_id":"9",
+      "stop_id":"1185",
+      "stop_sequence":"21",
+      "trip_id":"416378_merged_1001166"
+    },
+    {
+      "_id":"4dabe702516350ded9000ef3",
+      "arrival_time":"11:54:00",
+      "departure_time":"11:54:00",
+      "route_id":"9",
+      "stop_id":"1185",
+      "stop_sequence":"21",
+      "trip_id":"419203_merged_1005868"
+    },
+    {
+      "_id":"4dabe700516350ded9000b4f",
+      "arrival_time":"13:54:00",
+      "departure_time":"13:54:00",
+      "route_id":"9",
+      "stop_id":"1185",
+      "stop_sequence":"21",
+      "trip_id":"419208_merged_1005631"
+    }
+  ]
+}</code></pre>
+  
+  </body>
+</html>
