@@ -7,8 +7,4 @@ test:
   database: buskw_api_test
 
 production:
-  host: ENV['DB_HOST']
-  database: ENV['DB_NAME']
-  port: ENV['DB_PORT']
-  username: ENV['DB_USER']
-  password: ENV['DB_PASSWORD']
+  uri: <%= ENV['MONGODB_URL'] %>
