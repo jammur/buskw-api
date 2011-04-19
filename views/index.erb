@@ -31,28 +31,20 @@
     <h4>Resource URI</h4>
     <p>GET /stops</p>
     <h4>Sample Response</h4>
-    <pre><code>{
-  "stops":[
-    {
-      "id":"2031",
-      "name":"Meadowvale / Dansbury",
-      "latitude":"43.498785",
-      "longitude":"-80.498918"
-    },
-    {
-      "id":"1869",
-      "name":"Kinzie / Walker",
-      "latitude":"43.433097",
-      "longitude":"-80.436623"
-    },
-    {
-      "id":"1868",
-      "name":"Kinzie / Obermeyer",
-      "latitude":"43.434163",
-      "longitude":"-80.43499"
-    }
-  ]
-}</code></pre>
+    <pre><code>[
+  {
+    "id":"2031",
+    "name":"Meadowvale / Dansbury",
+    "latitude":"43.498785",
+    "longitude":"-80.498918"
+  },
+  {
+    "id":"1869",
+    "name":"Kinzie / Walker",
+    "latitude":"43.433097",
+    "longitude":"-80.436623"
+  }
+]</code></pre>
     
     <br>
     <hr>
@@ -62,10 +54,10 @@
     <p>GET /stops/{stop_id}</p>
     <h4>Sample Response</h4>
     <pre><code>{
-  "id":"2031",
-  "name":"Meadowvale / Dansbury",
-  "latitude":"43.498785",
-  "longitude":"-80.498918"
+  "id":"2676",
+  "name":"University / Seagram",
+  "latitude":"43.468427",
+  "longitude":"-80.539408"
 }</code></pre>
   
     <br>
@@ -75,34 +67,24 @@
     <h4>Resource URI</h4>
     <p>GET /stops/{stop_id}/times</p>
     <h4>Sample Response</h4>
-    <pre><code>{
-  "stop_times":[
-    {
-      "stop_id":"1185",
-      "trip_id":"416378_merged_1001166",
-      "route_id":"9",
-      "arrival_time":"10:56:00",
-      "departure_time":"10:56:00",
-      "stop_sequence":"21"
-    },
-    {
-      "stop_id":"1185",
-      "trip_id":"419203_merged_1005868",
-      "route_id":"13",
-      "arrival_time":"11:54:00",
-      "departure_time":"11:54:00",
-      "stop_sequence":"21"
-    },
-    {
-      "stop_id":"1185",
-      "trip_id":"419208_merged_1005631",
-      "route_id":"7",
-      "arrival_time":"13:54:00",
-      "departure_time":"13:54:00",
-      "stop_sequence":"21"
-    }
-  ]
-}</code></pre>
+    <pre><code>[
+  {
+    "stop_id":"2676",
+    "trip_id":"422904_merged_1011683",
+    "route_id":"12",
+    "arrival_time":"15:20:00",
+    "departure_time":"15:20:00",
+    "stop_sequence":"34"
+  },
+  {
+    "stop_id":"2676",
+    "trip_id":"426902_merged_999991",
+    "route_id":"8",
+    "arrival_time":"08:20:00",
+    "departure_time":"08:20:00",
+    "stop_sequence":"6"
+  }
+]</code></pre>
 
     <br>
     <hr>
@@ -111,34 +93,24 @@
     <h4>Resource URI</h4>
     <p>GET /stops/{stop_id}/times/{route_id}</p>
     <h4>Sample Response</h4>
-    <pre><code>{
-  "stop_times":[
-    {
-      "stop_id":"1185",
-      "trip_id":"416378_merged_1001166",
-      "route_id":"9",
-      "arrival_time":"10:56:00",
-      "departure_time":"10:56:00",
-      "stop_sequence":"21"
-    },
-    {
-      "stop_id":"1185",
-      "trip_id":"419203_merged_1005868",
-      "route_id":"9",
-      "arrival_time":"11:54:00",
-      "departure_time":"11:54:00",
-      "stop_sequence":"21"
-    },
-    {
-      "stop_id":"1185",
-      "trip_id":"419208_merged_1005631",
-      "route_id":"9",
-      "arrival_time":"13:54:00",
-      "departure_time":"13:54:00",
-      "stop_sequence":"21"
-    }
-  ]
-}</code></pre>
+    <pre><code>[
+  {
+    "stop_id":"2676",
+    "trip_id":"426902_merged_999991",
+    "route_id":"8",
+    "arrival_time":"08:20:00",
+    "departure_time":"08:20:00",
+    "stop_sequence":"6"
+  },
+  {
+    "stop_id":"2676",
+    "trip_id":"424530_merged_1009166",
+    "route_id":"8",
+    "arrival_time":"24:20:00",
+    "departure_time":"24:20:00",
+    "stop_sequence":"6"
+  }
+]</code></pre>
 
     <br>
     <hr>
@@ -147,22 +119,16 @@
     <h4>Resource URI</h4>
     <p>GET /routes</p>
     <h4>Sample Response</h4>
-    <pre><code>{
-  "routes":[
-    {
-      "id":"15",
-      "name":"Frederick"
-    },
-    {
-      "id":"17",
-      "name":"Heritage Park"
-    },
-    {
-      "id":"19",
-      "name":"Victoria South"
-    }
-  ]
-}</code></pre>
+    <pre><code>[
+  {
+    "id":"5",
+    "name":"Erb West"
+  },
+  {
+    "id":"24",
+    "name":"Highland"
+  }
+]</code></pre>
 
     <br>
     <hr>
@@ -172,10 +138,8 @@
     <p>GET /routes/{route_id}</p>
     <h4>Sample Response</h4>
     <pre><code>{
-  "route":{
-    "id":"9",
-    "name":"Lakeshore"
-  }
+  "id":"8",
+  "name":"University/Fairview Park"
 }</code></pre>
 
     <br>
@@ -186,34 +150,24 @@
     <h4>Resource URI</h4>
     <p>GET /routes/{route_id}/times</p>
     <h4>Sample Response</h4>
-    <pre><code>{
-  "stop_times":[
-    {
-      "stop_id":"1125",
-      "trip_id":"416321_merged_1003944",
-      "route_id":"9",
-      "arrival_time":"16:30:00",
-      "departure_time":"16:30:00",
-      "stop_sequence":"1"
-    },
-    {
-      "stop_id":"2809",
-      "trip_id":"416321_merged_1003944",
-      "route_id":"9",
-      "arrival_time":"16:31:00",
-      "departure_time":"16:31:00",
-      "stop_sequence":"2"
-    },
-    {
-      "stop_id":"2810",
-      "trip_id":"416321_merged_1003944",
-      "route_id":"9",
-      "arrival_time":"16:31:00",
-      "departure_time":"16:31:00",
-      "stop_sequence":"3"
-    }
-  ]
-}</code></pre>
+    <pre><code>[
+  {
+    "stop_id":"1125",
+    "trip_id":"416321_merged_1003944",
+    "route_id":"9",
+    "arrival_time":"16:30:00",
+    "departure_time":"16:30:00",
+    "stop_sequence":"1"
+  },
+  {
+    "stop_id":"2809",
+    "trip_id":"416321_merged_1003944",
+    "route_id":"9",
+    "arrival_time":"16:31:00",
+    "departure_time":"16:31:00",
+    "stop_sequence":"2"
+  }
+]</code></pre>
   
   </body>
 </html>
