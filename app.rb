@@ -90,6 +90,8 @@ get '/stops/:stop_id/times' do
     }
   end
   
+  timesOutput.sort! {|a,b| a.departure_time <=> b.departure_time }
+  
   timesOutput.to_json
 end
 
@@ -116,6 +118,8 @@ get '/stops/:stop_id/times/:route_id' do
       stop_sequence: time.stop_sequence
     }
   end
+  
+  timesOutput.sort! {|a,b| a[:departure_time] <=> b[:departure_time] }
   
   timesOutput.to_json
 end
