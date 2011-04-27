@@ -38,6 +38,35 @@ get '/stops/:stop_id' do
   stopOutput.to_json
 end
 
+get '/stops/:stop_id/routes' do
+  content_type :json
+  
+  stop = Stop.find(params[:stop_id])
+  if stop.nil?
+    raise Sinatra::NotFound
+    return
+  end
+  
+  route_ids = Set.new
+  
+  times = StopTime.where(stop_id: params[:stop_id])
+  times.each do |time|
+    route_ids << time.route_id
+  end
+  
+  routesOutput = Array.new
+  
+  route_ids.each do |route_id|
+    route = Route.find(route_id)
+    routesOutput << {
+      id: route.id,
+      name: route.name
+    }
+  end
+  
+  routesOutput.to_json
+end
+
 get '/stops/:stop_id/times' do
   content_type :json
   
